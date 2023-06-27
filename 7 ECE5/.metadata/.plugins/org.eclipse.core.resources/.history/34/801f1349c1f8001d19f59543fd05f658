@@ -1,0 +1,12 @@
+package Programs;
+
+public class PrimeRecursion {
+public static void main(String[] args) {
+	
+}
+static String Prime(int n) {
+	if(n<1)return "its not prime";
+	int i=2;
+	if(n%i==0)prime(z)
+}
+}

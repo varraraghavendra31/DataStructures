@@ -1,0 +1,23 @@
+package Programs;
+
+public class PrimeRecursion {
+public static void main(String[] args) {
+	String b=prime(15,2);
+	System.out.println(b);
+}
+static String prime(int n,int i) {
+	if(n<=1)return "its not valid";
+	if(n==2)return "its a prime";
+	if(n%i==0)return "its not a prime";
+	if(i>n/2)return "its a prime";
+	 prime(n,i+1);
+	 return "";
+    
+			
+	    
+	     
+	    
+	
+}
+
+}

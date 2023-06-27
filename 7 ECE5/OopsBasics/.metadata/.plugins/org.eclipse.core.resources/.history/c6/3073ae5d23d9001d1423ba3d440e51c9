@@ -1,0 +1,30 @@
+package in.raghava.patterns;
+import java.util.Scanner;
+public class InvertedVpattern {
+	public static void main(String[] args) {
+		System.out.print("enter a row size: ");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=1;i<=n;i++) {
+			for(int m=1;m<=n-i;m++)
+			{
+			 System.out.print("h");
+			}
+			System.out.print("*");
+			for(int k=1;k<=2*i-1;k++)
+			{
+			 System.out.print(" ");
+			}
+			System.out.print("*");
+			
+			System.out.println();
+		}
+	}
+	
+}
+
+
+			
+
+
+

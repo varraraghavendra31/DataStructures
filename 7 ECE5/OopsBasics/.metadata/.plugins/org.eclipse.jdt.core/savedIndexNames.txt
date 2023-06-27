@@ -1,0 +1,8 @@
+INDEX VERSION 1.132+D:\7 ECE5\OopsBasics\.metadata\.plugins\org.eclipse.jdt.core
+3666471016.index
+3706579684.index
+858178207.index
+2585112492.index
+1213395727.index
+1865797976.index
+1333361865.index

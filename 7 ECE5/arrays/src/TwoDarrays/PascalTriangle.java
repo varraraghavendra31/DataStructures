@@ -1,0 +1,43 @@
+package TwoDarrays;
+
+import java.util.Arrays;
+
+public class PascalTriangle {
+	public static void main(String[] args) {
+		System.out.println("enter a pascal triangle");
+		int n = 5;
+		int [][] b=pascal(n);
+		int space =n;
+		for(int i=0;i<b.length;i++) {
+			for(int j=1;j<=space;j++) {
+				System.out.print(" ");
+			}
+			try {
+				for(int j=0;j<b[i].length;j++) {
+					System.out.print(b[i][j]+" ");
+				}
+			}
+			catch(NullPointerException e) {
+				System.out.println(e);
+			}
+			
+			space--;
+			System.out.println();
+		}
+	}
+
+	public static int[][] pascal(int row) {
+		int[][] a = new int[row][];
+		for (int i = 0; i < a.length - 1; i++) {
+			a[i] = new int[i + 1];
+			for (int j = 0; j < a[i].length; j++) {
+				if (j == 0 || j == a[i].length - 1)
+					a[i][j] = 1;
+				else
+					a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
+			}
+			System.out.println();
+		}
+		return a;
+	}
+}

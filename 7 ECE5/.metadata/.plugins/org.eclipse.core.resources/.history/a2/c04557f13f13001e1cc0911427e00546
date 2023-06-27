@@ -1,0 +1,47 @@
+package trickyquestions;
+import java.util.Scanner;
+public class SwitchCase {
+public static void main(String[] args) {
+	System.out.println("enter a choice");
+	float n=new Scanner(System.in).nextFloat();
+	/*switch can allow byte  int   short long String char
+	 * 
+	 */
+	switch(n) {
+	case 1.0:{
+		System.out.println("monday");
+	}
+	break;
+	case "ma":
+	{
+		System.out.println("mofshdbnday");
+		break;
+//		System.out.println("hello");
+	}
+	case "amm":
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		break;
+	case "mma":
+		System.out.println("wednes day");
+		break;
+	default:
+		System.out.println("thurs day");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+		System.out.println("tues day");
+		System.out.println("hello hii");
+	
+	}
+}
+}

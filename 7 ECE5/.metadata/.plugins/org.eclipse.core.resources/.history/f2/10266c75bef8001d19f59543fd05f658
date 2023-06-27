@@ -1,0 +1,12 @@
+package Programs;
+
+public class StateRecursion {
+public static void main(String[] args) {
+	sta("i love you",100);
+}
+static String sta(String s,int n) {
+	if(n==0) return "";
+	n--;
+	return s;
+}
+}

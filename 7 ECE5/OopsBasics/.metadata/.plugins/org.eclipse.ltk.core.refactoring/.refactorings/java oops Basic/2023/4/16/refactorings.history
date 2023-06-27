@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.jsp.SuperPack.Test&apos; to &apos;SuperAccessMethodDataMembers&apos;&#x0D;&#x0A;- Original project: &apos;java oops Basic&apos;&#x0D;&#x0A;- Original element: &apos;com.jsp.SuperPack.Test&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jsp.SuperPack.SuperAccessMethodDataMembers&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Test&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.jsp.SuperPack{Test.java[Test" matchStrategy="1" name="SuperAccessMethodDataMembers" qualified="false" references="true" similarDeclarations="false" stamp="1682084487637" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,33 @@
+package TwoDarrays;
+import java.util.Arrays;
+import java.util.Scanner;
+public class JoggedArray {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.print("enter row size ");
+	int row=sc.nextInt();
+	System.out.print("enter col size ");
+	int[][]a=new int[row][];
+	for(int i=0;i<a.length;i++) {
+		int col=sc.nextInt();
+		a[i]=new int[col];
+		System.out.print("col size "+col);
+		for(int j=0;j<a[i].length;j++) {
+			a[i][j]=sc.nextInt();
+		}
+		
+	}
+	for(int[]b:a) {
+		System.out.println(Arrays.toString(b));
+	}
+	sc.close();
+	System.out.println("entered elements are ");
+	for(int[] b:a) {
+		for(int c:b) {
+			System.out.print(c+" ");
+		}
+		System.out.println();
+	}
+	
+}
+}

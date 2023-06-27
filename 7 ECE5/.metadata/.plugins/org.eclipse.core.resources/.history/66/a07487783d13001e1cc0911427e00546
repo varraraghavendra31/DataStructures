@@ -1,0 +1,47 @@
+package trickyquestions;
+
+import java.util.Scanner;
+
+public class LeapYear {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter an year ");
+//		int n=s.nextInt();
+		for(int n=1700;n<=2100;n++) {
+			try {
+				if(leap(n)) 
+					System.out.println(" it is leap year "+n);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	public static boolean isYear(int k) {
+		if (k % 400 == 0)return true;
+		else if(k % 4 == 0 && k % 100 != 0)
+			return true;
+		else
+			return false;
+		 
+	}
+	public static boolean isy(int k) {
+		if (k % 400 == 0||(k % 4 == 0 && k % 100 != 0)) {
+			return true;
+		}
+		else return false;
+	}
+	public  boolean leap(int k) {
+		boolean n=false;
+		if(k%4==0) {
+			n=true;
+			if(k%100==0) {
+				if(k%400==0) 
+					n=true;
+				else n=false;
+			}
+		}
+		else n=false;
+		return n;
+	}
+}

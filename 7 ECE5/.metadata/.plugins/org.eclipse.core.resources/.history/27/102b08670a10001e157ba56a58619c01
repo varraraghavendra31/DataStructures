@@ -1,0 +1,58 @@
+package com.datastructures;
+
+class Queue {
+//	first in first out
+//	fifo
+	private Node first;
+	private Node last;
+	private int count =0;
+	public void add(Object e) {
+		if(first==null) {
+			first=new Node(e,null);
+			last=first;
+			count++;
+			return;
+		}
+		last.next=new Node(e,null);
+		last=last.next;
+		count++;
+	}
+	
+	public boolean isEmpty() {
+		return count==0;
+	}
+	public Object peek() {
+		if(count==0)return null;
+		return first.ele;
+	}
+	public Object poll() {
+		if(count==0)return null;
+		Object e=first.ele;
+		first=first.next;
+		count--;
+//		if(first==null)last=null;
+		return e;
+	}
+	public int size() {
+		return count;
+	}
+	
+}
+
+public class TestQueue {
+	public static void main(String[] args) {
+		Queue q=new Queue();
+		q.add(10);
+		q.add(20);
+		q.add(40);
+		q.add(50);
+		q.add(60);
+		int a=q.size();
+		System.out.println(q.size());
+		
+//		for(int i=0;i<a;i++) {
+//			System.out.print(q.poll()+" ");
+//		}
+		
+	}
+}

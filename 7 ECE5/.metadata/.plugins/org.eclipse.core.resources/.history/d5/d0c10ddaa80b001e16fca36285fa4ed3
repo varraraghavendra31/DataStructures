@@ -1,0 +1,52 @@
+package com.patterns;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class InterviewPattern {
+	public static void main(String[] args) {
+		List<String> output = expense(35);
+		output.forEach((out) -> {
+			System.out.print("{"+out+"}" + " ");
+		});
+	}
+	public static float sum(float[] a) {
+		float sum = 0;
+		for (float c : a) {
+			sum += c;
+		}
+		return sum;
+	}
+	public static List<String> expense(float n) {
+		float[] toi = { 3, 3, 3, 3, 3, 5, 6 };
+		float[] hin = { 2.5f, 2.5f, 2.5f, 2.5f, 2.5f, 4, 4 };
+		float[] et = { 4, 4, 4, 4, 4, 4, 10 };
+		float[] bm = { 1.5f, 1.5f, 1.5f, 1.5f, 1.5f, 1.5f, 1.5f };
+		float[] ht = { 2, 2, 2, 2, 2, 4, 4 };
+		float[] a = new float[5];
+		List<String> b = new ArrayList<String>();
+		a[0] = sum(toi);
+		a[1] = sum(hin);
+		a[2] = sum(et);
+		a[3] = sum(bm);
+		a[4] = sum(ht);
+		Map<Float, String> map = new HashMap<>();
+		map.put(a[0], "toi");
+		map.put(a[1], "hin");
+		map.put(a[2], "et");                      
+		map.put(a[3], "bm");
+		map.put(a[4], "ht");
+		String[] c = { "toi", "hin", "et", "bm", "ht" };
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i + 1; j < a.length; j++) {
+				if (n > a[i] + a[j]) {
+					b.add(map.get(a[i])+" "+map.get(a[j]));
+				}
+			}
+
+		}
+		return b;
+	}
+}

@@ -1,0 +1,19 @@
+package Programs;
+
+public class PrimeRecursion {
+public static void main(String[] args) {
+	boolean b=prime(9,2);
+	System.out.println(b);
+}
+static boolean prime(int n,int i) {
+	    if(n<1)return false;
+	    if(i<=n/2) {
+		if(n%i==0)
+			return false;
+	    }
+		prime(n, i+1); 
+	return true;
+	
+}
+
+}

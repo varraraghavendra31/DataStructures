@@ -1,0 +1,24 @@
+package com.ravveseh.strings;
+
+public class ReverseTheWordInALine {
+
+	public static void main(String[] args) {
+		String s = "java is easy";
+		char[]a=s.toCharArray();
+		String s2 = "";
+		int i=a.length-1;
+		int j=a.length-1;
+		while(i>=0) {
+			if(a[i]!=' '||i>=0)i--;
+			int k=i+1;
+			while(k<=j) {
+				s2+=a[k];
+				k++;
+			}
+			if(i>-1)s2+=" ";
+			i--;
+			j=i;
+		}
+		System.out.println(s2);
+	}
+}

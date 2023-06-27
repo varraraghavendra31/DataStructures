@@ -1,0 +1,23 @@
+package StringPrograms;
+
+public class largestWord {
+public static void main(String[] args) {
+	String s="raman laxman ram reama mm am m ama m";
+	int i=0;
+	String temp="";
+	int count=0;
+	while(i<s.length()) {
+		count++;
+		if(s.charAt(i)==' ') {
+			System.out.println(count-1);
+			count=0;
+		}
+		else {
+			temp=""+s.charAt(i);
+			System.out.println(temp);
+		}
+		i++;
+	}
+	System.out.println(count);
+}
+}

@@ -1,0 +1,60 @@
+package StringPrograms;
+import java.util.Scanner;
+public class SecondSmallNumInArray {
+public static void main(String[] args) {
+	  int[] array = {1,1,1,2};
+	  int a=max(array);
+      int result = findSecondSmallest(array,a);
+      System.out.println("Second smallest element: " + result);
+  }
+//	int[]a= {7,7,8,9,34,20,10};
+//	int first=a[0];
+//	int second=a[0];
+//	int count=1;
+//	for(int i=1;i<a.length;i++) {
+//		if(count==1) {
+//			if(first<a[i]) {
+//				first=a[i];
+//				count++;
+//			}
+//		}
+//		if(a[i]<first) {
+//			second=first;
+//			first=a[i];	
+//		}
+//		else if(a[i]<second) {
+//				second=a[i];
+//			}
+//	}
+//	System.out.println(second);
+//}
+	    public static int findSecondSmallest(int[] arr,int n) {
+	        if (arr.length < 2) {
+	            return 0;
+	        }
+	        int smallest =n ;
+	        int secondSmallest = n;
+	        for (int num : arr) {
+	            if (num < smallest) {
+	                secondSmallest = smallest;
+	                smallest = num;
+	            } else if (num < secondSmallest && num != smallest) {
+	                secondSmallest = num;
+	            }
+	        }
+	        
+	        if (secondSmallest ==n ) {
+	            return 0;
+	        }
+
+	        return secondSmallest;
+	    }
+private static int max(int[]arr) {
+	int max=0;
+	for(int a:arr) {
+		if(max<a)max=a;
+		else max=a;
+	}
+	return max;
+}
+	}

@@ -1,0 +1,31 @@
+package StringPrograms;
+import java.util.Scanner;
+public class SecondSmallNumInArray {
+public static void main(String[] args) {
+	
+	int[]a= {7,7,8};
+	int first=a[0];
+	int second=a[0];
+	int count=1;
+	for(int i=1;i<a.length;i++) {
+		if(count==1) {
+			if(first<a[i]) {
+				first=a[i];
+				second=first;
+				count++;
+			}
+		}
+		if(a[i]<first) {
+			second=first;
+			first=a[i];	
+		}
+		else if(a[i]<second) {
+				second=a[i];
+			}
+		else if(a[i]==first) {
+			continue;
+		}
+	}
+	System.out.println(second);
+}
+}

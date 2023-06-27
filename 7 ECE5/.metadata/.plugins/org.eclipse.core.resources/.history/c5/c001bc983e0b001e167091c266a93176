@@ -1,0 +1,14 @@
+package com.numberPrograms;
+import java.util.Scanner;
+public class OneToNRecursion {
+public static void main(String[] args) {
+	System.out.println("enter a number");
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+	System.out.println(decr(n));
+}
+public static int decr(int n) {
+	if(n==1)return 1;
+	return(n--);
+}
+}

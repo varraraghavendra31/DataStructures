@@ -1,0 +1,23 @@
+package StringPrograms;
+
+public class ReverseTheCharInAWord {
+public static void main(String[] args) {
+		String s = "java is easy";
+		char[]a=s.toCharArray();
+		String s2 = "";
+		int j=0;
+		for(int i=0;i<a.length;i++){
+			while(i<=a.length-1&&a[i]!=' ') {
+				i++;
+			}
+			int k=i-1;
+			while(j<=k) {
+				s2+=a[k];
+				j++;
+			}
+			j=i;
+			s2+=" ";
+		}
+		System.out.println(s2);
+}
+}

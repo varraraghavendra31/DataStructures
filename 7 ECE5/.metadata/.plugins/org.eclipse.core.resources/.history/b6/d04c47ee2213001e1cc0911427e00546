@@ -1,0 +1,78 @@
+package StringPrograms;
+import java.util.Scanner;
+public class StringPermutation {
+	static int  count;
+//public static void main(String[] args) {
+//	Scanner sc=new Scanner(System.in);
+//	System.out.println("Enter a string");
+//	String s=sc.next();
+//	permutation(s,0,s.length()-1);
+//	System.out.println("no.of permutations "+count);
+//	
+//}
+//
+// static void permutation(String s, int start, int end) {
+//	if(start==end) {
+//		System.out.print(s+" ");
+//		count++;
+//		return ;
+//	}
+//	
+//	for(int i=start;i<=end;i++) {
+//		String s1=swap(s,start,i);
+//		count++;
+//		System.out.print(s1+" ");
+//	permutation(s,start+1,end);
+//	}
+//}
+//
+// static String swap(String s, int i, int j) {
+//	char[]a=s.toCharArray();
+//	char temp=a[i];
+//	a[i]=a[j];
+//	a[j]=temp;
+//	return new String(a);
+//}
+// public static String swapString(String a, int i, int j) {    
+//     char[] b =a.toCharArray();    
+//     char ch;    
+//     ch = b[i];    
+//     b[i] = b[j];    
+//     b[j] = ch;    
+//     return String.valueOf(b);    
+// }    
+     
+ public static void main(String[] args)    
+ {    
+     String str = "ABC";    
+     int len = str.length();    
+     System.out.println("All the permutations of the string are: ");    
+     generatePermutation(str, 0, len);   
+     System.out.println(count);
+ }    
+ public static String swap(String a, int i, int j) {    
+     char[] b =a.toCharArray();    
+     char ch;    
+     ch = b[i];    
+     b[i] = b[j];    
+     b[j] = ch;    
+     return String.valueOf(b);    
+ }    
+ public static void generatePermutation(String str, int start, int end)    
+ {        
+     if (start == end-1) {
+    	 System.out.println(str);  
+    	 count++;
+     }
+          
+     else    
+     {  
+         for (int i = start; i < end; i++)    
+         {    
+             str = swap(str,start,i);    
+             generatePermutation(str,start+1,end);    
+             str = swap(str,start,i);    
+         }    
+     }   
+ }    
+}
