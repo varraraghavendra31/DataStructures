@@ -15,7 +15,6 @@ public static void main(String[] args) {
 				break;
 			}
 		}
-		
 		if(flag) {
 			count++;
 //			System.out.println("h"+i);
